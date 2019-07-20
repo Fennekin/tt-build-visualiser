@@ -3,8 +3,8 @@
 
     <head>
         <style>
-            td {text-align:center;padding:4px 4px 4px 4px;}
-            th {font-family:"Arial",sans-serif;}
+            td {font-family:"Arial",sans-serif;text-align:center;padding:4px 4px 4px 4px;}
+            th {font-size:24 px;font-family:"Arial",sans-serif;}
             p.select-title {font-weight:bold;font-family:"Arial",sans-serif;}
             p.bodytext {font-family:"Arial",sans-serif;}
         </style>
@@ -14,241 +14,367 @@
             <p class="select-title">Select a Build: 
             <select onChange="buildChange(this.value)">
                 <option value="class-overview">Overview</option>
-                <option value="boon-support">Chronomancer - Boon Support</option>
-                <option value="block-chrono">Chronomancer - Block Build</option>
-                <option value="block-mesmer-learn">Mesmer - Block Learning Build</option>
+                <option value="dps-chrono">Chronomancer</option>
+                <option value="dps-reaper">Reaper</option>
             </select></p>
         </p></div>
-        <div id="class-overview" class="build-template" style="width:850px">
-            <p class="bodytext"><b>Boon Support Chronomancer</b> provides quickness, alacrity and boon extension for 5 players during the damage phase,
-            in addition to moderate damage output.</p>
-            <p class="bodytext"><b>Block Chronomancer</b> is designed for blocking husks, eggs and drool; and provides quickness for 10 players during the damage phase
-            with a small damage output.</p>
-            <p class="bodytext"><b>Block Mesmer (Learning)</b> is designed for players learning to block husks, eggs and drool. The build focuses on blocking instead of
-            boon output or damage.</p>
+        <div id="class-overview" class="build-template">
+            <p class="bodytext"><b>Chronomancer</b> provides a moderate amount of damage, in addition to providing some quickness and alacrity to the group.
+            It is more challenging to play compared to other classes.</p>
+            <p class="bodytext"><b>Reaper</b> provides large amounts of damage and is straightforward to use.</p>
         </div>
-        <div id="boon-support" class="build-template" style="display:none">
-            <div style="width:850px">
-                <p class="bodytext"><b>Boon Support Chronomancer</b> provides quickness, alacrity and boon extension for 5 players during the damage phase,
-                in addition to moderate damage output.</p>
-            </div>
-            <table><tr>
-                <th colspan=2>Weapon Sets (Berserker)</th>
-                <th>Specialisations and Traits</th>
-            </tr>
-            <tr>
-                <td><div
-                  data-armory-embed="items"
-                  data-armory-ids="46774,46770"
-                  data-armory-46774-upgrades="24615"
-                  data-armory-46774-infusions="43254"
-                  data-armory-46770-upgrades="36053"
-                  data-armory-46770-infusions="43254"
-                >
-                </div></td>
-                <td><div
-                  data-armory-embed="items"
-                  data-armory-ids="-1,46774"
-                  data-armory-blank-text="Empty"
-                  data-armory-46774-upgrades="36053"
-                  data-armory-46774-infusions="43254"
-                >
-                </div></td>
-                <td rowspan=7 style="text-align:left;width:480px"><div
-                  data-armory-embed="specializations"
-                  data-armory-ids="10,1,40"
-                  data-armory-10-traits="682,713,680"
-                  data-armory-1-traits="701,708,692"
-                  data-armory-40-traits="1995,2009,1942"
-                >
-                </div></td>
-            </tr>
-            <tr><th colspan=2>Armor (Berserker)</th></tr>
-            <tr><td colspan=2><div
-                  data-armory-embed="items"
-                  data-armory-ids="48081,48083,48079,48080,48082,48078"
-                  data-armory-48081-upgrades="24836"
-                  data-armory-48081-upgrade-count='{"24836": 6}'
-                  data-armory-48081-infusions="43254"
-                  data-armory-48083-upgrades="24836"
-                  data-armory-48083-upgrade-count='{"24836": 6}'
-                  data-armory-48083-infusions="43254"
-                  data-armory-48079-upgrades="24836"
-                  data-armory-48079-upgrade-count='{"24836": 6}'
-                  data-armory-48079-infusions="43254"
-                  data-armory-48080-upgrades="24836"
-                  data-armory-48080-upgrade-count='{"24836": 6}'
-                  data-armory-48080-infusions="43254"
-                  data-armory-48082-upgrades="24836"
-                  data-armory-48082-upgrade-count='{"24836": 6}'
-                  data-armory-48082-infusions="43254"
-                  data-armory-48078-upgrades="24836"
-                  data-armory-48078-upgrade-count='{"24836": 6}'
-                  data-armory-48078-infusions="43254"
-                >
-            </div></td></tr>
-            <tr><th colspan=2>Trinkets (Berserker)</th></tr>
-            <tr><td colspan=2><div
-                  data-armory-embed="items"
-                  data-armory-ids="49380,39233,39232,39308,75669,76024"
-                  data-armory-49380-infusions="43254,43254"
-                  data-armory-39233-infusions="43254"
-                  data-armory-39232-infusions="43254"
-                  data-armory-75669-infusions="43254,43254,43254"
-                  data-armory-76024-infusions="43254,43254,43254"
-                >
-            </div></td></tr>
-            <tr><th colspan=2>Utility Skills</th></tr>
-            <tr><td colspan=2><div
-                  data-armory-embed="skills"
-                  data-armory-ids="21750,10236,30814,29856,10311"
-                >
-            </div></td></tr>
-        </table></div>
-        <div id="block-chrono" class="build-template" style="display:none">
-            <div style="width:850px">
-                <p class="bodytext"><b>Block Chronomancer</b> is designed for blocking husks, eggs and drool; and provides quickness for 10 players during the damage phase
-            with a small damage output.</p>
-            </div>
-            <table><tr>
-                <th colspan=2>Weapon Sets (Diviner)</th>
-                <th>Specialisations and Traits</th>
-            </tr>
-            <tr>
-                <td><div
-                  data-armory-embed="items"
-                  data-armory-ids="89645,89922"
-                  data-armory-89645-upgrades="24615"
-                  data-armory-89645-infusions="43254"
-                  data-armory-89922-upgrades="36053"
-                  data-armory-89922-infusions="43254"
-                >
-                </div></td>
-                <td><div
-                  data-armory-embed="items"
-                  data-armory-ids="-1,89645"
-                  data-armory-blank-text="Empty"
-                  data-armory-89645-upgrades="36053"
-                  data-armory-89645-infusions="43254"
-                >
-                </div></td>
-                <td rowspan=7 style="text-align:left;width:480px"><div
-                  data-armory-embed="specializations"
-                  data-armory-ids="23,1,40"
-                  data-armory-23-traits="756,740,752"
-                  data-armory-1-traits="701,708,692"
-                  data-armory-40-traits="1995,2009,1942"
-                >
-                </div></td>
-            </tr>
-            <tr><th colspan=2>Armor (Diviner)</th></tr>
-            <tr><td colspan=2><div
-                  data-armory-embed="items"
-                  data-armory-ids="89912,89628,89768,89925,89940,89452"
-                  data-armory-89912-upgrades="24702"
-                  data-armory-89912-upgrade-count='{"24702": 6}'
-                  data-armory-89912-infusions="43254"
-                  data-armory-89628-upgrades="24702"
-                  data-armory-89628-upgrade-count='{"24702": 6}'
-                  data-armory-89628-infusions="43254"
-                  data-armory-89768-upgrades="24702"
-                  data-armory-89768-upgrade-count='{"24702": 6}'
-                  data-armory-89768-infusions="43254"
-                  data-armory-89925-upgrades="24702"
-                  data-armory-89925-upgrade-count='{"24702": 6}'
-                  data-armory-89925-infusions="43254"
-                  data-armory-89940-upgrades="24702"
-                  data-armory-89940-upgrade-count='{"24702": 6}'
-                  data-armory-89940-infusions="43254"
-                  data-armory-89452-upgrades="24702"
-                  data-armory-89452-upgrade-count='{"24702": 6}'
-                  data-armory-89452-infusions="43254"
-                >
-            </div></td></tr>
-            <tr><th colspan=2>Trinkets (Diviner with Berserker Backpiece)</th></tr>
-            <tr><td colspan=2><div
-                  data-armory-embed="items"
-                  data-armory-ids="49380,86978,89544,89759,89597,87030"
-                  data-armory-49380-infusions="43254,43254"
-                  data-armory-86978-infusions="43254"
-                  data-armory-89544-infusions="43254"
-                  data-armory-89597-infusions="43254,43254,43254"
-                  data-armory-87030-infusions="43254,43254,43254"
-                  data-armory-86978-stat="1538"
-                  data-armory-87030-stat="1538"
-                >
-            </div></td></tr>
-            <tr><th colspan=2>Utility Skills</th></tr>
-            <tr><td colspan=2><div
-                  data-armory-embed="skills"
-                  data-armory-ids="21750,10236,10247,10302,10311"
-                >
-            </div></td></tr>
-        </table></div>
-        <div id="block-mesmer-learn" class="build-template" style="display:none">
-            <div style="width:850px">
-                <p class="bodytext"><b>Block Mesmer (Learning)</b> is designed for players learning to block husks, eggs and drool. The build focuses on blocking instead of
-            boon output or damage.</p>
-            </div>
-            <table><tr>
-                <th colspan=2>Weapon Sets (Soldier)</th>
-                <th>Specialisations and Traits</th>
-            </tr>
-            <tr>
-                <td><div
-                  data-armory-embed="items"
-                  data-armory-ids="46211,46078"
-                  data-armory-46211-upgrades="24614"
-                  data-armory-46078-upgrades="24672"
-                >
-                </div></td>
-                <td><div
-                  data-armory-embed="items"
-                  data-armory-ids="-1,46211"
-                  data-armory-blank-text="Empty"
-                  data-armory-46211-upgrades="24672"
-                >
-                </div></td>
-                <td rowspan=7 style="text-align:left;width:480px"><div
-                  data-armory-embed="specializations"
-                  data-armory-ids="23,1,24"
-                  data-armory-23-traits="756,740,752"
-                  data-armory-1-traits="701,708,692"
-                  data-armory-24-traits="691,722,733"
-                >
-                </div></td>
-            </tr>
-            <tr><th colspan=2>Armor (Soldier)</th></tr>
-            <tr><td colspan=2><div
-                  data-armory-embed="items"
-                  data-armory-ids="48646,48625,48639,48660,48653,48632"
-                  data-armory-48646-upgrades="24699"
-                  data-armory-48646-upgrade-count='{"24699": 6}'
-                  data-armory-48625-upgrades="24699"
-                  data-armory-48625-upgrade-count='{"24699": 6}'
-                  data-armory-48639-upgrades="24699"
-                  data-armory-48639-upgrade-count='{"24699": 6}'
-                  data-armory-48660-upgrades="24699"
-                  data-armory-48660-upgrade-count='{"24699": 6}'
-                  data-armory-48653-upgrades="24699"
-                  data-armory-48653-upgrade-count='{"24699": 6}'
-                  data-armory-48632-upgrades="24699"
-                  data-armory-48632-upgrade-count='{"24699": 6}'
-                >
-            </div></td></tr>
-            <tr><th colspan=2>Trinkets (Soldier)</th></tr>
-            <tr><td colspan=2><div
-              data-armory-embed="items"
-              data-armory-ids="39151,39225,39224,39264,37089,37076"
-            >
-            </div></td></tr>
-            <tr><th colspan=2>Utility Skills</th></tr>
-            <tr><td colspan=2><div
-              data-armory-embed="skills"
-              data-armory-ids="21750,10234,10247,10302,10311"
-            >
-            </div></td></tr>
-        </table></div>
+        <div id="dps-chrono" class="build-template" style="display:none">
+            <table>
+                <tr><th colspan=2>Weapon Sets (Berserker)</th></tr>
+                <tr>
+                    <td><div
+                      data-armory-embed="items"
+                      data-armory-ids="46774,24615"
+                      data-armory-46774-upgrades="24615"
+                      data-armory-46774-infusions="43254"
+                    >
+                    </div><div
+                      data-armory-embed="items"
+                      data-armory-ids="46770,24618"
+                      data-armory-46770-upgrades="24618"
+                      data-armory-46770-infusions="43254"
+                    >
+                    </div></td>
+                    <td><div
+                      data-armory-embed="items"
+                      data-armory-ids="-1,-1"
+                      data-armory-blank-text="Empty"
+                    >
+                    </div><div
+                      data-armory-embed="items"
+                      data-armory-ids="46774,24618"
+                      data-armory-46774-upgrades="24618"
+                      data-armory-46774-infusions="43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Armor (Berserker)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="48081,48083,48079,48080,48082,48078,24723"
+                      data-armory-48081-upgrades="24723"
+                      data-armory-48081-upgrade-count='{"24723": 6}'
+                      data-armory-48081-infusions="43254"
+                      data-armory-48083-upgrades="24723"
+                      data-armory-48083-upgrade-count='{"24723": 6}'
+                      data-armory-48083-infusions="43254"
+                      data-armory-48079-upgrades="24723"
+                      data-armory-48079-upgrade-count='{"24723": 6}'
+                      data-armory-48079-infusions="43254"
+                      data-armory-48080-upgrades="24723"
+                      data-armory-48080-upgrade-count='{"24723": 6}'
+                      data-armory-48080-infusions="43254"
+                      data-armory-48082-upgrades="24723"
+                      data-armory-48082-upgrade-count='{"24723": 6}'
+                      data-armory-48082-infusions="43254"
+                      data-armory-48078-upgrades="24723"
+                      data-armory-48078-upgrade-count='{"24723": 6}'
+                      data-armory-48078-infusions="43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Trinkets (Berserker)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="49380,39233,39232,39308,75669,76024"
+                      data-armory-49380-infusions="43254,43254"
+                      data-armory-39233-infusions="43254"
+                      data-armory-39232-infusions="43254"
+                      data-armory-75669-infusions="43254,43254,43254"
+                      data-armory-76024-infusions="43254,43254,43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Utility Skills</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="skills"
+                      data-armory-ids="21750,30525,30814,29856,10311"
+                    >
+                    </div></td>
+                </tr>
+                <tr class="narrowdisp">
+                    <th colspan=2>Specialisations and Traits</th>
+                </tr>
+                <tr class="narrowdisp">
+                    <td colspan=2 style="text-align:left"><div
+                      data-armory-embed="specializations"
+                      data-armory-ids="10,1,40"
+                      data-armory-10-traits="682,713,680"
+                      data-armory-1-traits="701,708,692"
+                      data-armory-40-traits="1995,2009,1942"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Skill Usage (Phase 1)</th></tr>
+                <tr><td colspan=2 style="text-align:left">A few seconds before wurm is vulnerable:</td></tr>
+                <tr><td colspan=2 style="text-align:left">
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="10173"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="10174"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="21750"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="10174"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                </td></tr>
+                <tr><td colspan=2 style="text-align:left">When wurm is vulnerable and you have three illusions ready:</td></tr>
+                <tr><td colspan=2 style="text-align:left">
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="10334"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="29830"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="10311"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="30643"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="30814"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="29856"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="30525"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="30747"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="10334"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="30525"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="30643"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="30814"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="29856"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                </td></tr>
+                <tr><td colspan=2 style="text-align:left">Repeat until wurm is invulnerable:<br/>
+                Prioritise Blurred Frenzy, use autoattacks on the sword as filler.</td></tr>
+                <tr><td colspan=2 style="text-align:left">
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="10334"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="10170"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                </td></tr>
+            </table>
+        </div>
+        <div id="dps-reaper" class="build-template" style="display:none">
+            <table>
+                <tr><th colspan=2>Weapon Sets (Berserker, can use any weapon for 2nd set)</th></tr>
+                <tr>
+                    <td><div
+                      data-armory-embed="items"
+                      data-armory-ids="46762,24615"
+                      data-armory-46762-upgrades="24615,36053"
+                      data-armory-46762-infusions="43254,43254"
+                    >
+                    </div><div
+                      data-armory-embed="items"
+                      data-armory-ids="-1,36053"
+                      data-armory-blank-text="Empty"
+                    >
+                    </div></td>
+                    <td><div
+                      data-armory-embed="items"
+                      data-armory-ids="30811,24575"
+                      data-armory-blank-text="any weapon"
+                    >
+                    </div><div
+                      data-armory-embed="items"
+                      data-armory-ids="-1,-1"
+                      data-armory-blank-text="any weapon"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Armor (Berserker)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="48081,48083,48079,48080,48082,48078,24836"
+                      data-armory-48081-upgrades="24836"
+                      data-armory-48081-upgrade-count='{"24836": 6}'
+                      data-armory-48081-infusions="43254"
+                      data-armory-48083-upgrades="24836"
+                      data-armory-48083-upgrade-count='{"24836": 6}'
+                      data-armory-48083-infusions="43254"
+                      data-armory-48079-upgrades="24836"
+                      data-armory-48079-upgrade-count='{"24836": 6}'
+                      data-armory-48079-infusions="43254"
+                      data-armory-48080-upgrades="24836"
+                      data-armory-48080-upgrade-count='{"24836": 6}'
+                      data-armory-48080-infusions="43254"
+                      data-armory-48082-upgrades="24836"
+                      data-armory-48082-upgrade-count='{"24836": 6}'
+                      data-armory-48082-infusions="43254"
+                      data-armory-48078-upgrades="24836"
+                      data-armory-48078-upgrade-count='{"24836": 6}'
+                      data-armory-48078-infusions="43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Trinkets (Berserker)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="49380,39233,39232,39308,75669,76024"
+                      data-armory-49380-infusions="43254,43254"
+                      data-armory-39233-infusions="43254"
+                      data-armory-39232-infusions="43254"
+                      data-armory-75669-infusions="43254,43254,43254"
+                      data-armory-76024-infusions="43254,43254,43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Utility Skills</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="skills"
+                      data-armory-ids="10547,10546,10622,10611,10549"
+                    >
+                    </div></td>
+                </tr>
+                <tr class="narrowdisp">
+                    <th colspan=2>Specialisations and Traits</th>
+                </tr>
+                <tr class="narrowdisp">
+                    <td colspan=2 style="text-align:left"><div
+                      data-armory-embed="specializations"
+                      data-armory-ids="53,50,34"
+                      data-armory-53-traits="914,829,919"
+                      data-armory-50-traits="875,894,893"
+                      data-armory-34-traits="2020,1969,2021"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Skill Usage (Phase 1)</th></tr>
+                <tr><td colspan=2 style="text-align:left">Make sure you're using the greatsword with Force/Night sigils!<br/>
+                (The other weapon is used only to get 25 Bloodlust stacks.)</td></tr>
+                <tr><td colspan=2 style="text-align:left">
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="10549"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="29855"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="10546"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="30792"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                </td></tr>
+                <tr><td colspan=2 style="text-align:left">Repeat until wurm is invulnerable:<br/>
+                Prioritise Soul Spiral, use autoattacks in Reaper's Shroud as filler.</td></tr>
+                <tr><td colspan=2 style="text-align:left">
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="30504"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                    <div
+                      data-armory-embed="skills"
+                      data-armory-ids="29442"
+                      data-armory-inline-text='wiki'
+                      data-armory-size=30>
+                    </div>
+                </td></tr>
+            </table>
+        </div>
         <script>
             function buildChange(buildId) {
                 var builds=document.getElementsByClassName("build-template");
