@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
-
+    <title>Triple Trouble Build Visualiser</title>
     <head>
         <style>
+            h1 {font-family:"Arial",sans-serif;}
             td {font-family:"Arial",sans-serif;text-align:center;padding:4px 4px 4px 4px;}
             th {font-size:24 px;font-family:"Arial",sans-serif;}
             p.select-title {font-weight:bold;font-family:"Arial",sans-serif;}
             p.bodytext {font-family:"Arial",sans-serif;}
+            ul.bodytext {font-family:"Arial",sans-serif;}
         </style>
     </head>
     <body>
+        <h1>Triple Trouble - Build List (July 2019)</h1>
         <div id="build-select"><p>
             <p class="select-title">Select a Build: 
             <select onChange="buildChange(this.value)">
@@ -17,11 +20,12 @@
                 <option value="banner-berserker">Banner Berserker</option>
                 <option value="dps-dragonhunter">Power Dragonhunter</option>
                 <option value="quickness-firebrand">Condition Quickness Firebrand</option>
+                <option value="dps-reaper">Power Reaper</option>
                 <option value="alacrity-renegade">Alacrity Renegade</option>
                 <option value="dps-soulbeast">Power Soulbeast</option>
                 <option value="might-deadeye">Might Deadeye</option>
-                <option value="dps-reaper">Power Reaper</option>
-                <option value="might-power-tempest">Power Might Tempest</option>
+                <option value="might-power-tempest">Power Might Tempest</option> 
+                <option value="condition-power-tempest">Condition Might Tempest</option>
             </select></p>
         </p></div>
         <div id="class-overview" class="build-template">
@@ -32,8 +36,594 @@
             <p class="bodytext"><b>Alacrity Renegade</b> provides some damage and alacrity for the group.</p>
             <p class="bodytext"><b>Power Soulbeast</b> provides a moderate amount of damage, in addition to Frost Spirit and Spotter.</p>
             <p class="bodytext"><b>Might Deadeye</b> provides some damage, might and fury for your group.</p>
-            <p class="bodytext"><b>Reaper</b> provides very large amounts of damage and is straightforward to use.</p>
-            <p class="bodytext"><b>Power Might Tempest</b> provides some damage, might and fury for your group, in addition to minor healing at the Amber Wurm.</p>
+            <p class="bodytext"><b>Reaper</b> provides very large amounts of damage in the first phase and is straightforward to use.</p>
+            <p class="bodytext"><b>Power/Condition Might Tempest</b> provides some damage, might and fury for your group, in addition to minor healing at the Amber Wurm.</p>
+            <p class="bodytext">Currently, the optimal composition for every 10 players is:</p>
+            <ul class="bodytext">
+              <li>1 Banner Berserker (for Banner of Strength and Discipline)</li>
+              <li>1 Power Soulbeast (for Sun Spirit)</li>
+              <li>1 Alacrity Renegade (for alacrity)</li>
+              <li>1 Might Tempest (either variant for might)</li>
+              <li>6 Condition Firebrands (covers quickness and fury)</li>
+            </ul>
+            <p class="bodytext">While the first phase of the wurm can technically be killed within one damage phase, there is very little room for error. In addition,
+            the event takes fairly long to reset. Thus, this composition focuses on completing the first phase within two damage phases, while maximising the damage
+            done in the second phase. Condition Firebrands are chosen as they provide quickness and have consistently high damage potential on the second phase.
+            Might Tempest is preferred as its damage output on the second phase is more consistent than Might Deadeye.</p>
+            <p class="bodytext">A more flexible composition that completes the event quickly is:</p>
+            <ul class="bodytext">
+              <li>1 Banner Berserker (for Banner of Strength and Discipline)</li>
+              <li>1 Power Soulbeast (for Frost Spirit)</li>
+              <li>1 Alacrity Renegade (for alacrity)</li>
+              <li>1 Might Deadeye or Tempest (for might and fury)</li>
+              <li>2 Quickness Firebrands (for quickness)</li>
+              <li>4 DPS Players - viable choices include:
+                <li>Power Berserker (allows you to split banners so you can run Head Butt + Outrage for more Berserk uptime)</li>
+                <li>Power Dragonhunter (provides stability for second phase)</li>
+                <li>Power Soulbeast (can provide a second spirit, such as Sun Spirit)</li>
+                <li>Power Daredevil/Deadeye</li>
+                <li>Power Holosmith</li>
+                <li>Power Reaper</li>
+                <li>Power Weaver</li>
+                <li>Condition Weaver</li>
+              </li>
+            </ul>
+            <p class="bodytext">Builds for other DPS classes (specifically for Triple Trouble) will be available soon.</p>
+            <p class="bodytext">Unfortunately for Chronomancers, the Firebrand-Renegade combination is easier to use and has higher damage. This means that I will not be
+            covering any mesmer builds, and it seems that mesmers will be stuck in "Block Jail" for this update!</p>
+            <p class="bodytext"><a href="https://github.com/Fennekin/tt-build-visualiser" target="_blank">Source Files</a></p>
+        </div>
+        <div id="banner-berserker" class="build-template" style="display:none">
+            <table>
+                <tr><th colspan=2>Weapon Sets (Berserker)</th></tr>
+                <tr>
+                    <td><div
+                      data-armory-embed="items"
+                      data-armory-ids="46762,24615"
+                      data-armory-46762-upgrades="24615,36053"
+                      data-armory-46762-infusions="43254,43254"
+                    >
+                    </div><div
+                      data-armory-embed="items"
+                      data-armory-ids="-1,36053"
+                      data-armory-blank-text="Empty"
+                    >
+                    </div></td>
+                    <td><div
+                      data-armory-embed="items"
+                      data-armory-ids="46759,24615"
+                      data-armory-46759-upgrades="24615"
+                      data-armory-46759-infusions="43254"
+                    >
+                    </div><div
+                      data-armory-embed="items"
+                      data-armory-ids="46759,36053"
+                      data-armory-46759-upgrades="36053"
+                      data-armory-46759-infusions="43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Armor (Berserker)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="48075,48077,48073,48074,48076,48072,24818"
+                      data-armory-48075-upgrades="24818"
+                      data-armory-48075-upgrade-count='{"24818": 6}'
+                      data-armory-48075-infusions="43254"
+                      data-armory-48077-upgrades="24818"
+                      data-armory-48077-upgrade-count='{"24818": 6}'
+                      data-armory-48077-infusions="43254"
+                      data-armory-48073-upgrades="24818"
+                      data-armory-48073-upgrade-count='{"24818": 6}'
+                      data-armory-48073-infusions="43254"
+                      data-armory-48074-upgrades="24818"
+                      data-armory-48074-upgrade-count='{"24818": 6}'
+                      data-armory-48074-infusions="43254"
+                      data-armory-48076-upgrades="24818"
+                      data-armory-48076-upgrade-count='{"24818": 6}'
+                      data-armory-48076-infusions="43254"
+                      data-armory-48072-upgrades="24818"
+                      data-armory-48072-upgrade-count='{"24818": 6}'
+                      data-armory-48072-infusions="43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Trinkets (Berserker)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="49380,39233,39232,39308,75669,76024"
+                      data-armory-49380-infusions="43254,43255"
+                      data-armory-39233-infusions="43254"
+                      data-armory-39232-infusions="43254"
+                      data-armory-75669-infusions="43254,43254,43254"
+                      data-armory-76024-infusions="43254,43254,43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Utility Skills</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="skills"
+                      data-armory-ids="30189,14410,14405,14407,14419"
+                    >
+                    </div></td>
+                </tr>
+                <tr class="narrowdisp">
+                    <th colspan=2>Specialisations and Traits</th>
+                </tr>
+                <tr class="narrowdisp">
+                    <td colspan=2 style="text-align:left"><div
+                      data-armory-embed="specializations"
+                      data-armory-ids="4,51,18"
+                      data-armory-4-traits="1451,1338,1437"
+                      data-armory-51-traits="1413,1484,1369"
+                      data-armory-18-traits="2049,2011,1928"
+                    >
+                    </div></td>
+                </tr>
+            </table>
+        </div>
+        <div id="dps-dragonhunter" class="build-template" style="display:none">
+            <table>
+                <tr><th colspan=2>Weapon Sets (Berserker)</th></tr>
+                <tr>
+                    <td><div
+                      data-armory-embed="items"
+                      data-armory-ids="46762,24615"
+                      data-armory-46762-upgrades="24615,36053"
+                      data-armory-46762-infusions="43254,43254"
+                    >
+                    </div><div
+                      data-armory-embed="items"
+                      data-armory-ids="-1,36053"
+                      data-armory-blank-text="Empty"
+                    >
+                    </div></td>
+                    <td><div
+                      data-armory-embed="items"
+                      data-armory-ids="46769,24615"
+                      data-armory-46769-upgrades="24615"
+                      data-armory-46769-infusions="43254"
+                    >
+                    </div><div
+                      data-armory-embed="items"
+                      data-armory-ids="46761,36053"
+                      data-armory-46761-upgrades="36053"
+                      data-armory-46761-infusions="43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Armor (Berserker)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="48075,48077,48073,48074,48076,48072,24836"
+                      data-armory-48075-upgrades="24836"
+                      data-armory-48075-upgrade-count='{"24836": 6}'
+                      data-armory-48075-infusions="43254"
+                      data-armory-48077-upgrades="24836"
+                      data-armory-48077-upgrade-count='{"24836": 6}'
+                      data-armory-48077-infusions="43254"
+                      data-armory-48073-upgrades="24836"
+                      data-armory-48073-upgrade-count='{"24836": 6}'
+                      data-armory-48073-infusions="43254"
+                      data-armory-48074-upgrades="24836"
+                      data-armory-48074-upgrade-count='{"24836": 6}'
+                      data-armory-48074-infusions="43254"
+                      data-armory-48076-upgrades="24836"
+                      data-armory-48076-upgrade-count='{"24836": 6}'
+                      data-armory-48076-infusions="43254"
+                      data-armory-48072-upgrades="24836"
+                      data-armory-48072-upgrade-count='{"24836": 6}'
+                      data-armory-48072-infusions="43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Trinkets (Berserker)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="49380,39233,39232,39308,75669,76024"
+                      data-armory-49380-infusions="43254,43254"
+                      data-armory-39233-infusions="43254"
+                      data-armory-39232-infusions="43254"
+                      data-armory-75669-infusions="43254,43254,43254"
+                      data-armory-76024-infusions="43254,43254,43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Utility Skills</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="skills"
+                      data-armory-ids="21664,9093,9153,9168,29965"
+                    >
+                    </div></td>
+                </tr>
+                <tr class="narrowdisp">
+                    <th colspan=2>Specialisations and Traits</th>
+                </tr>
+                <tr class="narrowdisp">
+                    <td colspan=2 style="text-align:left"><div
+                      data-armory-embed="specializations"
+                      data-armory-ids="42,16,27"
+                      data-armory-42-traits="634,653,2017"
+                      data-armory-16-traits="574,565,1683"
+                      data-armory-27-traits="1911,1835,1955"
+                    >
+                    </div></td>
+                </tr>
+            </table>
+        </div>
+        <div id="quickness-firebrand" class="build-template" style="display:none">
+            <table>
+                <tr><th colspan=2>Weapon Sets (Viper)</th></tr>
+                <tr>
+                    <td><div
+                      data-armory-embed="items"
+                      data-armory-ids="83445,44944"
+                      data-armory-83445-upgrades="44944"
+                      data-armory-83445-infusions="43253"
+                      data-armory-83445-stat="1153"
+                    >
+                    </div><div
+                      data-armory-embed="items"
+                      data-armory-ids="76271,24624"
+                      data-armory-76271-upgrades="24624"
+                      data-armory-76271-infusions="43253"
+                    >
+                    </div></td>
+                    <td><div
+                      data-armory-embed="items"
+                      data-armory-ids="71387,24624"
+                      data-armory-71387-upgrades="24624,24578"
+                    >
+                    </div><div
+                      data-armory-embed="items"
+                      data-armory-ids="-1,24578"
+                      data-armory-blank-text="Empty"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Armor (Sinister)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="67457,67455,67459,67458,67456,67451,24765"
+                      data-armory-67457-upgrades="24765"
+                      data-armory-67457-upgrade-count='{"24765": 6}'
+                      data-armory-67457-infusions="43253"
+                      data-armory-67455-upgrades="24765"
+                      data-armory-67455-upgrade-count='{"24765": 6}'
+                      data-armory-67455-infusions="43253"
+                      data-armory-67459-upgrades="24765"
+                      data-armory-67459-upgrade-count='{"24765": 6}'
+                      data-armory-67459-infusions="43253"
+                      data-armory-67458-upgrades="24765"
+                      data-armory-67458-upgrade-count='{"24765": 6}'
+                      data-armory-67458-infusions="43253"
+                      data-armory-67456-upgrades="24765"
+                      data-armory-67456-upgrade-count='{"24765": 6}'
+                      data-armory-67456-infusions="43253"
+                      data-armory-67451-upgrades="24765"
+                      data-armory-67451-upgrade-count='{"24765": 6}'
+                      data-armory-67451-infusions="43253"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Trinkets (Sinister)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="72446,67896,67894,67898,71726,70695"
+                      data-armory-72446-infusions="43253,43253"
+                      data-armory-72446-stat="1067"
+                      data-armory-67896-infusions="43253"
+                      data-armory-67894-infusions="43253"
+                      data-armory-71726-infusions="43253,43253,43253"
+                      data-armory-70695-infusions="43253,43253,43253"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Utility Skills</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="skills"
+                      data-armory-ids="41714,40915,9187,9168,29965"
+                    >
+                    </div></td>
+                </tr>
+                <tr class="narrowdisp">
+                    <th colspan=2>Specialisations and Traits</th>
+                </tr>
+                <tr class="narrowdisp">
+                    <td colspan=2 style="text-align:left"><div
+                      data-armory-embed="specializations"
+                      data-armory-ids="42,16,62"
+                      data-armory-42-traits="634,1556,635"
+                      data-armory-16-traits="566,567,1686"
+                      data-armory-62-traits="2101,2076,2159"
+                    >
+                    </div></td>
+                </tr>
+            </table>
+        </div>
+        <div id="alacrity-renegade" class="build-template" style="display:none">
+            <table>
+                <tr><th colspan=2>Weapon Sets (Diviner)</th></tr>
+                <tr>
+                    <td><div
+                      data-armory-embed="items"
+                      data-armory-ids="89645,24615"
+                      data-armory-89645-upgrades="24615"
+                      data-armory-89645-infusions="43254"
+                    >
+                    </div><div
+                      data-armory-embed="items"
+                      data-armory-ids="89645,36053"
+                      data-armory-89645-upgrades="36053"
+                      data-armory-89645-infusions="43254"
+                    >
+                    </div></td>
+                    <td><div
+                      data-armory-embed="items"
+                      data-armory-ids="-1,-1"
+                      data-armory-blank-text="Empty"
+                    >
+                    </div><div
+                      data-armory-embed="items"
+                      data-armory-ids="29163,24575"
+                      data-armory-29163-upgrades="24575"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Armor (Diviner)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="89924,89785,89733,89822,89460,89656,24818"
+                      data-armory-89924-upgrades="24818"
+                      data-armory-89924-upgrade-count='{"24818": 6}'
+                      data-armory-89924-infusions="43254"
+                      data-armory-89785-upgrades="24818"
+                      data-armory-89785-upgrade-count='{"24818": 6}'
+                      data-armory-89785-infusions="43254"
+                      data-armory-89733-upgrades="24818"
+                      data-armory-89733-upgrade-count='{"24818": 6}'
+                      data-armory-89733-infusions="43254"
+                      data-armory-89822-upgrades="24818"
+                      data-armory-89822-upgrade-count='{"24818": 6}'
+                      data-armory-89822-infusions="43254"
+                      data-armory-89460-upgrades="24818"
+                      data-armory-89460-upgrade-count='{"24818": 6}'
+                      data-armory-89460-infusions="43254"
+                      data-armory-89656-upgrades="24818"
+                      data-armory-89656-upgrade-count='{"24818": 6}'
+                      data-armory-89656-infusions="43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Trinkets (Diviner with Berserker Backpiece)</th></tr>
+                    <tr><td colspan=2><div
+                          data-armory-embed="items"
+                          data-armory-ids="49380,86978,89544,89759,89597,87030"
+                          data-armory-49380-infusions="43254,43254"
+                          data-armory-86978-infusions="43254"
+                          data-armory-89544-infusions="43254"
+                          data-armory-89597-infusions="43254,43254,43254"
+                          data-armory-87030-infusions="43254,43254,43254"
+                          data-armory-86978-stat="1538"
+                          data-armory-87030-stat="1538"
+                        >
+                    </div></td></tr>
+                <tr><th colspan=2>Legends</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="skills"
+                      data-armory-ids="26650,41858"
+                    >
+                    </div></td>
+                </tr>
+                <tr class="narrowdisp">
+                    <th colspan=2>Specialisations and Traits</th>
+                </tr>
+                <tr class="narrowdisp">
+                    <td colspan=2 style="text-align:left"><div
+                      data-armory-embed="specializations"
+                      data-armory-ids="15,3,63"
+                      data-armory-15-traits="1767,1802,1715"
+                      data-armory-3-traits="1761,1774,1791"
+                      data-armory-63-traits="2079,2108,2182"
+                    >
+                    </div></td>
+                </tr>
+            </table>
+        </div>
+        <div id="dps-soulbeast" class="build-template" style="display:none">
+            <table>
+                <tr><th colspan=2>Weapon Sets (Berserker)</th></tr>
+                <tr>
+                    <td><div
+                      data-armory-embed="items"
+                      data-armory-ids="46762,24615"
+                      data-armory-46762-upgrades="24615,36053"
+                      data-armory-46762-infusions="43254,43254"
+                    >
+                    </div><div
+                      data-armory-embed="items"
+                      data-armory-ids="-1,36053"
+                      data-armory-blank-text="Empty"
+                    >
+                    </div></td>
+                    <td><div
+                      data-armory-embed="items"
+                      data-armory-ids="46774,24615"
+                      data-armory-46774-upgrades="24615"
+                      data-armory-46774-infusions="43254"
+                    >
+                    </div><div
+                      data-armory-embed="items"
+                      data-armory-ids="46759,36053"
+                      data-armory-46759-upgrades="36053"
+                      data-armory-46759-infusions="43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Armor (Berserker)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="48087,48089,48085,48086,48088,48084,24836"
+                      data-armory-48087-upgrades="24836"
+                      data-armory-48087-upgrade-count='{"24836": 6}'
+                      data-armory-48087-infusions="43254"
+                      data-armory-48089-upgrades="24836"
+                      data-armory-48089-upgrade-count='{"24836": 6}'
+                      data-armory-48089-infusions="43254"
+                      data-armory-48085-upgrades="24836"
+                      data-armory-48085-upgrade-count='{"24836": 6}'
+                      data-armory-48085-infusions="43254"
+                      data-armory-48086-upgrades="24836"
+                      data-armory-48086-upgrade-count='{"24836": 6}'
+                      data-armory-48086-infusions="43254"
+                      data-armory-48088-upgrades="24836"
+                      data-armory-48088-upgrade-count='{"24836": 6}'
+                      data-armory-48088-infusions="43254"
+                      data-armory-48084-upgrades="24836"
+                      data-armory-48084-upgrade-count='{"24836": 6}'
+                      data-armory-48084-infusions="43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Trinkets (Berserker)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="49380,39233,39232,39308,75669,76024"
+                      data-armory-49380-infusions="43254,43254"
+                      data-armory-39233-infusions="43254"
+                      data-armory-39232-infusions="43254"
+                      data-armory-75669-infusions="43254,43254,43254"
+                      data-armory-76024-infusions="43254,43254,43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Utility Skills</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="skills"
+                      data-armory-ids="44948,12497,12633,12491,45717"
+                    >
+                    </div></td>
+                </tr>
+                <tr class="narrowdisp">
+                    <th colspan=2>Specialisations and Traits</th>
+                </tr>
+                <tr class="narrowdisp">
+                    <td colspan=2 style="text-align:left"><div
+                      data-armory-embed="specializations"
+                      data-armory-ids="30,32,55"
+                      data-armory-30-traits="1069,1016,1888"
+                      data-armory-32-traits="1606,1047,1066"
+                      data-armory-55-traits="2071,2085,2128"
+                    >
+                    </div></td>
+                </tr>
+            </table>
+        </div>
+        <div id="might-deadeye" class="build-template" style="display:none">
+            <table>
+                <tr><th colspan=2>Weapon Sets (Assassin)</th></tr>
+                <tr>
+                    <td><div
+                      data-armory-embed="items"
+                      data-armory-ids="47045,24615"
+                      data-armory-47045-upgrades="24615"
+                      data-armory-47045-infusions="43254"
+                    >
+                    </div><div
+                      data-armory-embed="items"
+                      data-armory-ids="47052,36053"
+                      data-armory-47052-upgrades="36053"
+                      data-armory-47052-infusions="43254"
+                    >
+                    </div></td>
+                    <td><div
+                      data-armory-embed="items"
+                      data-armory-ids="47053,24615"
+                      data-armory-47053-upgrades="24615,24575"
+                      data-armory-47053-infusions="43254,43254"
+                    >
+                    </div><div
+                      data-armory-embed="items"
+                      data-armory-ids="-1,24575"
+                      data-armory-blank-text="Empty"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Armor (Berserker)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="48087,48089,48085,48086,48088,48084,24714"
+                      data-armory-48087-upgrades="24714"
+                      data-armory-48087-upgrade-count='{"24714": 6}'
+                      data-armory-48087-infusions="43254"
+                      data-armory-48089-upgrades="24714"
+                      data-armory-48089-upgrade-count='{"24714": 6}'
+                      data-armory-48089-infusions="43254"
+                      data-armory-48085-upgrades="24714"
+                      data-armory-48085-upgrade-count='{"24714": 6}'
+                      data-armory-48085-infusions="43254"
+                      data-armory-48086-upgrades="24714"
+                      data-armory-48086-upgrade-count='{"24714": 6}'
+                      data-armory-48086-infusions="43254"
+                      data-armory-48088-upgrades="24714"
+                      data-armory-48088-upgrade-count='{"24714": 6}'
+                      data-armory-48088-infusions="43254"
+                      data-armory-48084-upgrades="24714"
+                      data-armory-48084-upgrade-count='{"24714": 6}'
+                      data-armory-48084-infusions="43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Trinkets (Berserker)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="49380,39233,39232,39308,75669,76024"
+                      data-armory-49380-infusions="43254,43254"
+                      data-armory-39233-infusions="43254"
+                      data-armory-39232-infusions="43254"
+                      data-armory-75669-infusions="43254,43254,43254"
+                      data-armory-76024-infusions="43254,43254,43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Utility Skills</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="skills"
+                      data-armory-ids="45088,13046,13062,41158,45508"
+                    >
+                    </div></td>
+                </tr>
+                <tr class="narrowdisp">
+                    <th colspan=2>Specialisations and Traits</th>
+                </tr>
+                <tr class="narrowdisp">
+                    <td colspan=2 style="text-align:left"><div
+                      data-armory-embed="specializations"
+                      data-armory-ids="28,35,58"
+                      data-armory-28-traits="1245,1704,1167"
+                      data-armory-35-traits="1268,1299,1904"
+                      data-armory-58-traits="2136,2160,2146"
+                    >
+                    </div></td>
+                </tr>
+            </table>
         </div>
         <div id="dps-chrono" class="build-template" style="display:none">
             <table>
@@ -385,6 +975,167 @@
                       data-armory-size=30>
                     </div>
                 </td></tr>
+            </table>
+        </div>
+        <div id="might-power-tempest" class="build-template" style="display:none">
+            <table>
+                <tr><th colspan=2>Weapon Sets (Berserker)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="46769,24615"
+                      data-armory-46769-upgrades="24615"
+                      data-armory-46769-infusions="43254"
+                    >
+                    </div><div
+                      data-armory-embed="items"
+                      data-armory-ids="46777,24618"
+                      data-armory-46777-upgrades="24618"
+                      data-armory-46777-infusions="43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Armor (Berserker)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="48081,48083,48079,48080,48082,48078,24714"
+                      data-armory-48081-upgrades="24714"
+                      data-armory-48081-upgrade-count='{"24714": 6}'
+                      data-armory-48081-infusions="43254"
+                      data-armory-48083-upgrades="24714"
+                      data-armory-48083-upgrade-count='{"24714": 6}'
+                      data-armory-48083-infusions="43254"
+                      data-armory-48079-upgrades="24714"
+                      data-armory-48079-upgrade-count='{"24714": 6}'
+                      data-armory-48079-infusions="43254"
+                      data-armory-48080-upgrades="24714"
+                      data-armory-48080-upgrade-count='{"24714": 6}'
+                      data-armory-48080-infusions="43254"
+                      data-armory-48082-upgrades="24714"
+                      data-armory-48082-upgrade-count='{"24714": 6}'
+                      data-armory-48082-infusions="43254"
+                      data-armory-48078-upgrades="24714"
+                      data-armory-48078-upgrade-count='{"24714": 6}'
+                      data-armory-48078-infusions="43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Trinkets (Berserker)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="49380,39233,39232,39308,75669,76024"
+                      data-armory-49380-infusions="43254,43254"
+                      data-armory-39233-infusions="43254"
+                      data-armory-39232-infusions="43254"
+                      data-armory-75669-infusions="43254,43254,43254"
+                      data-armory-76024-infusions="43254,43254,43254"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Utility Skills</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="skills"
+                      data-armory-ids="21656,5638,5542,5624,5516"
+                    >
+                    </div></td>
+                </tr>
+                <tr class="narrowdisp">
+                    <th colspan=2>Specialisations and Traits</th>
+                </tr>
+                <tr class="narrowdisp">
+                    <td colspan=2 style="text-align:left"><div
+                      data-armory-embed="specializations"
+                      data-armory-ids="31,41,48"
+                      data-armory-31-traits="328,334,1510"
+                      data-armory-41-traits="232,214,1503"
+                      data-armory-48-traits="1952,2015,1839"
+                    >
+                    </div></td>
+                </tr>
+            </table>
+        </div>
+        <div id="condition-power-tempest" class="build-template" style="display:none">
+            <table>
+                <tr><th colspan=2>Weapon Sets (Viper)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="76688,44944"
+                      data-armory-76688-upgrades="44944"
+                      data-armory-76688-infusions="43253"
+                    >
+                    </div><div
+                      data-armory-embed="items"
+                      data-armory-ids="75325,24624"
+                      data-armory-75325-upgrades="24624"
+                      data-armory-75325-infusions="43253"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Armor (Sinister)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="67442,67449,67453,67452,67450,67454,24765"
+                      data-armory-67442-upgrades="24765"
+                      data-armory-67442-upgrade-count='{"24765": 6}'
+                      data-armory-67442-infusions="43253"
+                      data-armory-67449-upgrades="24765"
+                      data-armory-67449-upgrade-count='{"24765": 6}'
+                      data-armory-67449-infusions="43253"
+                      data-armory-67453-upgrades="24765"
+                      data-armory-67453-upgrade-count='{"24765": 6}'
+                      data-armory-67453-infusions="43253"
+                      data-armory-67452-upgrades="24765"
+                      data-armory-67452-upgrade-count='{"24765": 6}'
+                      data-armory-67452-infusions="43253"
+                      data-armory-67450-upgrades="24765"
+                      data-armory-67450-upgrade-count='{"24765": 6}'
+                      data-armory-67450-infusions="43253"
+                      data-armory-67454-upgrades="24765"
+                      data-armory-67454-upgrade-count='{"24765": 6}'
+                      data-armory-67454-infusions="43253"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Trinkets (Sinister)</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="items"
+                      data-armory-ids="72446,67896,67894,67898,71726,70695"
+                      data-armory-72446-infusions="43253,43253"
+                      data-armory-72446-stat="1067"
+                      data-armory-67896-infusions="43253"
+                      data-armory-67894-infusions="43253"
+                      data-armory-71726-infusions="43253,43253,43253"
+                      data-armory-70695-infusions="43253,43253,43253"
+                    >
+                    </div></td>
+                </tr>
+                <tr><th colspan=2>Utility Skills</th></tr>
+                <tr>
+                    <td colspan=2><div
+                      data-armory-embed="skills"
+                      data-armory-ids="21656,5635,5542,5734,5516"
+                    >
+                    </div></td>
+                </tr>
+                <tr class="narrowdisp">
+                    <th colspan=2>Specialisations and Traits</th>
+                </tr>
+                <tr class="narrowdisp">
+                    <td colspan=2 style="text-align:left"><div
+                      data-armory-embed="specializations"
+                      data-armory-ids="31,37,48"
+                      data-armory-31-traits="296,325,1510"
+                      data-armory-37-traits="253,265,263"
+                      data-armory-48-traits="1952,2015,1839"
+                    >
+                    </div></td>
+                </tr>
             </table>
         </div>
         <script>
